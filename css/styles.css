@@ -10140,7 +10140,8 @@ header.masthead {
   padding-bottom: 6rem;
   text-align: center;
   color: #fff;
-  background-image: url("../assets/img/cricket.PNG");
+  background-color: black; /* For browsers that do not support gradients */
+  background-image: linear-gradient(black, grey);
   background-repeat: no-repeat;
   background-attachment: scroll;
   background-position: center center;
@@ -10163,8 +10164,8 @@ header.masthead .masthead-heading {
 
 @media (min-width: 768px) {
   header.masthead {
-    padding-top: 17rem;
-    padding-bottom: 12.5rem;
+    padding-top: 5.5rem;
+    padding-bottom: 0rem;
   }
   header.masthead .masthead-subheading {
     font-size: 2.25rem;
@@ -10176,7 +10177,7 @@ header.masthead .masthead-heading {
     font-size: 4.5rem;
     font-weight: 700;
     line-height: 4.5rem;
-    margin-bottom: 4rem;
+    /*margin-bottom: 4rem;*/
   }
 }
 #portfolio .portfolio-item {
@@ -10502,4 +10503,64 @@ section#contact form#contactForm :-ms-input-placeholder {
   text-align: center;
   font-size: 0.9rem;
   font-family: "Montserrat", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+}
+
+.item-1{
+  height: 450px;
+  background-color: black; /* For browsers that do not support gradients */
+  background-image: url("../assets/img/portfolio/1.1.jpeg");
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+.item-2{
+  height: 450px;
+  background-color: black; /* For browsers that do not support gradients */
+  background-image: url("../assets/img/portfolio/2.1.jpeg");
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+
+}
+.item-3{
+  height: 450px;
+  background-color: black; /* For browsers that do not support gradients */
+  background-image: url("../assets/img/portfolio/3.1.jpeg");
+
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+.item-4{
+  height: 450px;
+  background-color: black; /* For browsers that do not support gradients */
+  background-image: url("../assets/img/portfolio/4.1.jpeg");
+
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+.item-5{
+  height: 450px;
+  background-color: black; /* For browsers that do not support gradients */
+  background-image: url("../assets/img/portfolio/5.jpeg");
+
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+.item-6{
+  height: 450px;
+  background-color: black; /* For browsers that do not support gradients */
+  background-image: url("../assets/img/portfolio/6.jpeg");
+
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
 }
