@@ -31,17 +31,18 @@
                         <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#portfolio">Live Matches</a></li>
                         <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#about">About</a></li>
                         <li class="nav-item">
-                            <div class="dropdown show">
-                                <a class="nav-link  dropdown-toggle" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                    Teams
-                                </a>
+                            <a class="nav-link js-scroll-trigger" data-toggle="modal" data-target=".bd-example-modal-lg" data-whatever="@mdo">Register</a>
+<!--                            <div class="dropdown show">-->
+<!--                                <a class="nav-link  dropdown-toggle" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">-->
+<!--                                    Teams-->
+<!--                                </a>-->
 
-                                <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-                                    <a class="dropdown-item"  href="#team">Team List</a>
-                                    <a class="dropdown-item" data-toggle="modal" data-target=".bd-example-modal-lg" data-whatever="@mdo">Register</a>
-                                    <a class="dropdown-item" href="#">Something else here</a>
-                                </div>
-                            </div>
+<!--                                <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">-->
+<!--                                    <a class="dropdown-item"  href="#team">Team List</a>-->
+<!--                                   -->
+<!--                                    <a class="dropdown-item" href="#">Something else here</a>-->
+<!--                                </div>-->
+<!--                            </div>-->
                         </li>
                     </ul>
                 </div>
@@ -299,111 +300,137 @@
                         <span aria-hidden="true">&times;</span>
                     </button>
                 </div>
-                <div class="modal-body">
-                    <form>
 
-                        <div class="form-group">
-                            <label for="team-name" class="col-form-label">Team Name</label>
-                            <input type="text" class="form-control" id="team-name">
+                <form >
+                <div class="modal-body">
+                        <div class="row">
+                            <div class="form-group col-md-6">
+                                <label for="team-name" class="col-form-label">Team Name</label>
+                                <input type="text" class="form-control" id="team-name" required>
+                            </div>
+                            <div class="form-group col-md-6">
+                                <label for="captain-name" class="col-form-label">Captain</label>
+                                <input type="text" class="form-control" id="captain-name" required>
+                            </div>
                         </div>
                         <div class="row">
                             <div class="form-group col-md-6">
-                                <label for="player-1" class="col-form-label">Player 1(c)</label>
-                                <input type="text" class="form-control" id="player-1">
+                                <label for="captain-email" class="col-form-label">Email</label>
+                                <input type="text" class="form-control" id="captain-email" required>
+                            </div>
+                            <div class="form-group col-md-6">
+                                    <label for="contact-number" class="col-form-label">WhatsApp No</label>
+                                    <input type="text" class="form-control" id="contact-number" required>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="form-group col-md-6">
+                                <label for="player-1" class="col-form-label">Captain Name</label>
+                                <input type="text" class="form-control" id="player-1" required>
                             </div>
                             <div class="form-group col-md-6">
                                 <label for="jersey-1" class="col-form-label">Jersey no</label>
-                                <input type="text" class="form-control" id="jersey-1">
+                                <input type="text" class="form-control" id="jersey-1" required>
                             </div>
                         </div>
                         <div class="row">
                             <div class="form-group col-md-6">
-                                <label for="player-3" class="col-form-label">Player 3</label>
+                                <label for="player-2" class="col-form-label" required="required">Player 2</label>
+                                <input type="text" class="form-control" id="player-2">
+                            </div>
+                            <div class="form-group col-md-6">
+                                <label for="jersey-3" class="col-form-label">Jersey no</label>
+                                <input type="text" class="form-control" id="jersey-2" required>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="form-group col-md-6">
+                                <label for="player-3" class="col-form-label" required="required">Player 3</label>
                                 <input type="text" class="form-control" id="player-3">
                             </div>
                             <div class="form-group col-md-6">
                                 <label for="jersey-3" class="col-form-label">Jersey no</label>
-                                <input type="text" class="form-control" id="jersey-3">
+                                <input type="text" class="form-control" id="jersey-3" required>
                             </div>
                         </div>
                         <div class="row">
                             <div class="form-group col-md-6">
                                 <label for="player-4" class="col-form-label">Player 4</label>
-                                <input type="text" class="form-control" id="player-4">
+                                <input type="text" class="form-control" id="player-4" required>
                             </div>
                             <div class="form-group col-md-6">
                                 <label for="jersey-4" class="col-form-label">Jersey no</label>
-                                <input type="text" class="form-control" id="jersey-4">
+                                <input type="text" class="form-control" id="jersey-4" required>
                             </div>
                         </div>
                         <div class="row">
                             <div class="form-group col-md-6">
                                 <label for="player-5" class="col-form-label">Player 5</label>
-                                <input type="text" class="form-control" id="player-5">
+                                <input type="text" class="form-control" id="player-5" required>
                             </div>
                             <div class="form-group col-md-6">
                                 <label for="jersey-5" class="col-form-label">Jersey no</label>
-                                <input type="text" class="form-control" id="jersey-5">
+                                <input type="text" class="form-control" id="jersey-5" required>
                             </div>
                         </div>
                         <div class="row">
                             <div class="form-group col-md-6">
                                 <label for="player-6" class="col-form-label">Player 6</label>
-                                <input type="text" class="form-control" id="player-6">
+                                <input type="text" class="form-control" id="player-6" required>
                             </div>
                             <div class="form-group col-md-6">
                                 <label for="jersey-6" class="col-form-label">Jersey no</label>
-                                <input type="text" class="form-control" id="jersey-6">
+                                <input type="text" class="form-control" id="jersey-6" required>
                             </div>
                         </div>
                         <div class="row">
                             <div class="form-group col-md-6">
                                 <label for="player-7" class="col-form-label">Player 7</label>
-                                <input type="text" class="form-control" id="player-7">
+                                <input type="text" class="form-control" id="player-7" required>
                             </div>
                             <div class="form-group col-md-6">
                                 <label for="jersey-7" class="col-form-label">Jersey no</label>
-                                <input type="text" class="form-control" id="jersey-7">
+                                <input type="text" class="form-control" id="jersey-7" required>
                             </div>
                         </div>
                         <div class="row">
                             <div class="form-group col-md-6">
                                 <label for="player-8" class="col-form-label">Player 8</label>
-                                <input type="text" class="form-control" id="player-8">
+                                <input type="text" class="form-control" id="player-8" required>
                             </div>
                             <div class="form-group col-md-6">
                                 <label for="jersey-8" class="col-form-label">Jersey no</label>
-                                <input type="text" class="form-control" id="jersey-8">
+                                <input type="text" class="form-control" id="jersey-8" required>
                             </div>
                         </div>
                         <div class="row">
                             <div class="form-group col-md-6">
                                 <label for="player-9" class="col-form-label">Player 9</label>
-                                <input type="text" class="form-control" id="player-9">
+                                <input type="text" class="form-control" id="player-9" required>
                             </div>
                             <div class="form-group col-md-6">
                                 <label for="jersey-9" class="col-form-label">Jersey no</label>
-                                <input type="text" class="form-control" id="jersey-9">
+                                <input type="text" class="form-control" id="jersey-9" required>
                             </div>
                         </div>
                         <div class="row">
                             <div class="form-group col-md-6">
                                 <label for="player-10" class="col-form-label">Player 10</label>
-                                <input type="text" class="form-control" id="player-10">
+                                <input type="text" class="form-control" id="player-10" required>
                             </div>
                             <div class="form-group col-md-6">
                                 <label for="jersey-10" class="col-form-label">Jersey no</label>
-                                <input type="text" class="form-control" id="jersey-10">
+                                <input type="text" class="form-control" id="jersey-10" required>
                             </div>
                         </div>
                         <div class="row">
                             <div class="form-group col-md-6">
                                 <label for="player-11" class="col-form-label">Player 11</label>
-                                <input type="text" class="form-control" id="player-11">
+                                <input type="text" class="form-control" id="player-11" required>
                             </div>
                             <div class="form-group col-md-6">
                                 <label for="jersey-11" class="col-form-label">Jersey no</label>
-                                <input type="text" class="form-control" id="jersey-11">
+                                <input type="text" class="form-control" id="jersey-11" required>
                             </div>
                         </div>
                         <div class="row">
@@ -420,12 +447,12 @@
                             <label for="message-text" class="col-form-label">Message:</label>
                             <textarea class="form-control" id="message-text"></textarea>
                         </div>
-                    </form>
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                    <button type="button" class="btn btn-primary">Submit </button>
+                    <button type="submit" class="btn btn-primary">Submit </button>
                 </div>
+                </form>
             </div>
         </div>
     </div>
