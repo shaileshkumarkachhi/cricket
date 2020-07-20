@@ -253,6 +253,24 @@
                                 <p class="help-block text-danger"></p>
                             </div>
                         </div>
+                        <div style="color: #ffffff" class="col-md-12">
+                            <div>
+                            <small>*Note: By contacting us means you are showing your interest to participate
+                            in the event. This doesn’t mean an automatic selection for the event. We will contact
+                                you back on whether your club is selected for the event or not with in 48 hours.
+                                Once your club is selected you will have to do the complete player registration in
+                                our website and pay an entry fees of 2500 SEK with in 24 hours.
+                                The communication will be done on your registered mail ID.
+                                For the teams selected,if they fail to comply with the player registration details and entry
+                                fee payment timeline,the next team in the list will be considered over the teams missing the deadline.
+                        </small>
+                            <div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="checkbox" id="terms-condition" value="true" data-validation-required-message="Please accept the conditions." required="required">
+                            <label class="form-check-label" for="terms-condition">I hereby agree on above note, FAQs and <a href="index.html">terms conditions</a></label>
+                            <p class="help-block text-danger"></p>
+                        </div>
+                        </div>
                     </div>
                     <div class="text-center">
                         <div id="success"></div>
@@ -291,7 +309,7 @@
     </body>
 
 
-    <div class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+    <div class="modal fade bd-example-modal-lg" id="registration" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
         <div  class="modal-dialog modal-lg" role="document">
             <div class="modal-content">
                 <div class="modal-header">
@@ -301,7 +319,7 @@
                     </button>
                 </div>
 
-                <form id="teamRegistrationForm" name="sentRegistrationRequest" novalidate="novalidate">
+                <form id="teamRegistrationForm" name="sentRegistrationRequest">
                 <div class="modal-body">
                         <div class="row">
                             <div class="form-group col-md-6">
@@ -449,6 +467,7 @@
                         </div>
                 </div>
                 <div class="modal-footer">
+                    <div id="registration-success"></div>
                     <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
                     <button type="submit" class="btn btn-primary" is="sendRegistrationButton">Submit </button>
                 </div>
