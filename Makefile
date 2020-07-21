@@ -1,4 +1,4 @@
-DOCKER_IMAGE =  eu.gcr.io/ingka-sandbox-angup2-dev/ecs-web/ecs-web-dream11
+DOCKER_IMAGE =  eu.gcr.io/hardy-abode-283819/ecs-web/ecs-web-dream11
 
 .PHONY: all
 all:

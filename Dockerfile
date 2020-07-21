@@ -4,7 +4,7 @@
 
 FROM nginx as dev
 COPY rootfs /
-COPY . /usr/share/nginx/html
+COPY code/ /usr/share/nginx/html
 EXPOSE 8080
 
 ###############################################################################
@@ -13,5 +13,5 @@ EXPOSE 8080
 
 FROM nginx as prod
 COPY rootfs /
-COPY ./ /usr/share/nginx/html/
+COPY code/ /usr/share/nginx/html
 EXPOSE 8080
