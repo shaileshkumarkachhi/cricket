@@ -10504,63 +10504,35 @@ section#contact form#contactForm :-ms-input-placeholder {
   font-size: 0.9rem;
   font-family: "Montserrat", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
 }
+.slide-image-bg{
+  height: 500px;
+  background-color: black; /* For browsers that do not support gradients */
+   -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+}
 
 .item-1{
-  height: 450px;
-  background-color: black; /* For browsers that do not support gradients */
-  background-image: url("../assets/img/portfolio/1.1.jpeg");
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
+  background-image: url("../assets/img/portfolio/boys-cricket/boys-1.jpg");
+ 
 }
 .item-2{
-  height: 450px;
-  background-color: black; /* For browsers that do not support gradients */
-  background-image: url("../assets/img/portfolio/2.1.jpeg");
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
-
+  background-image: url("../assets/img/portfolio/boys-cricket/boys-2.jpg");
 }
 .item-3{
-  height: 450px;
-  background-color: black; /* For browsers that do not support gradients */
-  background-image: url("../assets/img/portfolio/3.1.jpeg");
-
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
+  background-image: url("../assets/img/portfolio/ladies-cricket/ladies-1.jpg");
 }
 .item-4{
-  height: 450px;
-  background-color: black; /* For browsers that do not support gradients */
-  background-image: url("../assets/img/portfolio/4.1.jpeg");
-
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
+  background-image: url("../assets/img/portfolio/ladies-cricket/ladies-2.jpg");
 }
 .item-5{
-  height: 450px;
-  background-color: black; /* For browsers that do not support gradients */
-  background-image: url("../assets/img/portfolio/5.jpeg");
+  background-image: url("../assets/img/portfolio/ladies-cricket/ladies-3.jpg");
 
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
 }
 .item-6{
-  height: 450px;
-  background-color: black; /* For browsers that do not support gradients */
-  background-image: url("../assets/img/portfolio/6.jpeg");
-
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
+  background-image: url("../assets/img/portfolio/kids-cricket/kids-1.jpeg");
 }
