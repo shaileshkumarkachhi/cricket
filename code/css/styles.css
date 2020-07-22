@@ -10536,3 +10536,39 @@ section#contact form#contactForm :-ms-input-placeholder {
 .item-6{
   background-image: url("../assets/img/portfolio/kids-cricket/kids-1.jpeg");
 }
+
+.crew{
+  background-color: #dfe0e1;
+    height: 237px;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+}
+.ankit{
+    background-image: url(../assets/img/team/ankit_gupta.jpeg);
+}
+.david{
+    background-image: url(../assets/img/team/david_williman.jpg);
+}
+.marie{
+    background-image: url(../assets/img/team/marie_williman.jpg);
+}
+.shailesh{
+    background-image: url(../assets/img/team/shailesh_patel.jpg);
+}
+.khurram{
+    background-image: url(../assets/img/team/khurram_shahzad.jpg);
+}
+.sambit{
+    background-image: url(../assets/img/team/sambit_pattanaik.jpg);
+}
+.vishrut{
+    background-image: url(../assets/img/team/vishrut_krashak.jpeg);
+}
+.ashish{
+    background-image: url(../assets/img/team/ashish_rajput.jpg);
+}
