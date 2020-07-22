@@ -1,653 +1,738 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="utf-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-        <meta name="description" content="" />
-        <meta name="author" content="" />
-        <title>ECS</title>
-        <link rel="icon" type="image/x-icon" href="assets/img/favicon.ico" />
-        <!-- Font Awesome icons (free version)-->
-        <script src="https://use.fontawesome.com/releases/v5.13.0/js/all.js" crossorigin="anonymous"></script>
-        <!-- Google fonts-->
-        <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css" />
-        <link href="https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic,700italic" rel="stylesheet" type="text/css" />
-        <link href="https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700" rel="stylesheet" type="text/css" />
-        <!-- Core theme CSS (includes Bootstrap)-->
-        <link href="css/styles.css" rel="stylesheet" />
-    </head>
-    <body id="page-top">
-        <!-- Navigation-->
-        <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
-            <div class="container">
-                <a class="navbar-brand js-scroll-trigger" href="#page-top">ECN Dream XI - MALMÖ </a>
-                <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-                    Menu
-                    <i class="fas fa-bars ml-1"></i>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarResponsive">
-                    <ul class="navbar-nav text-uppercase ml-auto">
-                        <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#services">Events</a></li>
-                        <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#portfolio">Videos</a></li>
-                        <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#ecn-about">ECN Crew</a></li>
-                        <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#about">Malmöhus</a></li>
-                        <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#contact">Register</a></li>
 
-                        <!-- <a class="nav-link js-scroll-trigger" data-toggle="modal" data-target=".bd-example-modal-lg">Register</a> -->
-                        <li class="nav-item">
-                            <div class="dropdown show">
-                                    <a class="nav-link  dropdown-toggle" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+    <title>ECS</title>
+    <link rel="icon" type="image/x-icon" href="assets/img/favicon.ico" />
+    <!-- Font Awesome icons (free version)-->
+    <script src="https://use.fontawesome.com/releases/v5.13.0/js/all.js" crossorigin="anonymous"></script>
+    <!-- Google fonts-->
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css" />
+    <link href="https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic,700italic" rel="stylesheet"
+        type="text/css" />
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700" rel="stylesheet" type="text/css" />
+    <!-- Core theme CSS (includes Bootstrap)-->
+    <link href="css/styles.css" rel="stylesheet" />
+</head>
+
+<body id="page-top">
+    <!-- Navigation-->
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
+        <div class="container">
+            <a class="navbar-brand js-scroll-trigger" href="#page-top">ECN Dream XI - MALMÖ </a>
+            <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse"
+                data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false"
+                aria-label="Toggle navigation">
+                Menu
+                <i class="fas fa-bars ml-1"></i>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+                <ul class="navbar-nav text-uppercase ml-auto">
+                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#services">Events</a></li>
+                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#portfolio">Videos</a></li>
+                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#ecn-about">ECN Crew</a></li>
+                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#about">Malmöhus</a></li>
+                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#contact">Register</a></li>
+
+                    <!-- <a class="nav-link js-scroll-trigger" data-toggle="modal" data-target=".bd-example-modal-lg">Register</a> -->
+                    <li class="nav-item">
+                        <div class="dropdown show">
+                            <a class="nav-link  dropdown-toggle" href="#" data-toggle="dropdown" aria-haspopup="true"
+                                aria-expanded="false">
                                 More
-                              </a>
-                              <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-                                    <a class="dropdown-item"  href="#team">Ladies Cricket</a>
-                                    <a class="dropdown-item" href="#">News</a>
-                                    <a class="dropdown-item" href="#">Admin login</a>
-                                </div>
+                            </a>
+                            <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                                <a class="dropdown-item" href="#team">Ladies Cricket</a>
+                                <a class="dropdown-item" href="#">News</a>
+                                <a class="dropdown-item" href="#">Admin login</a>
                             </div>
-                       </li>
-                    </ul>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!-- Masthead-->
+    <header class="masthead">
+        <!-- Carousel Wrapper-->
+        <div id="carousel-example-2" class="carousel slide carousel-fade" data-ride="carousel">
+            <!--Indicators-->
+            <ol class="carousel-indicators">
+                <li data-target="#carousel-example-2" data-slide-to="0" class="active"></li>
+                <li data-target="#carousel-example-2" data-slide-to="1"></li>
+                <li data-target="#carousel-example-2" data-slide-to="2"></li>
+            </ol>
+            <!--/.Indicators-->
+            <!--Slides-->
+            <div class="carousel-inner" role="listbox">
+                <div class="carousel-item active">
+                    <div class="view">
+                        <img class="d-block w-100" src="assets/img/portfolio/boys-cricket/boys-1.1.jpg"
+                            alt="First slide" width="100%" height="600px" />
+                        <div class="mask rgba-black-light"></div>
+                    </div>
+                    <div class="carousel-caption">
+                        <h3 class="h3-responsive">Men's Cricket Team</h3>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <!--Mask color-->
+                    <div class="view">
+                        <img class="d-block w-100" src="assets/img/portfolio/ladies-cricket/ladies-5.jpg"
+                            alt="Second slide" width="100%" height="600px" />
+                        <div class="mask rgba-black-strong"></div>
+                    </div>
+                    <div class="carousel-caption">
+                        <h3 class="h3-responsive">Ladies Cricket Team</h3>
+                        <p>SM indoor champions for 2020</p>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <!--Mask color-->
+                    <div class="view">
+                        <img class="d-block w-100" src="assets/img/portfolio/kids-cricket/kids-1.jpeg" alt="Third slide"
+                            width="100%" height="600px" />
+                        <div class="mask rgba-black-slight"></div>
+                    </div>
+                    <div class="carousel-caption">
+                        <h3 class="h3-responsive">Kids Cricket Team</h3>
+                    </div>
                 </div>
             </div>
-        </nav>
-        <!-- Masthead-->
-        <header class="masthead">
-                <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
-                    <div class="carousel-inner">
+            <!--/.Slides-->
+            <!--Controls-->
+            <a class="carousel-control-prev" href="#carousel-example-2" role="button" data-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="sr-only">Previous</span>
+            </a>
+            <a class="carousel-control-next" href="#carousel-example-2" role="button" data-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="sr-only">Next</span>
+            </a>
+            <!--/.Controls-->
+        </div>
+        <!--/.Carousel Wrapper -->
 
-                        <div class="carousel-item  slide-image-bg active item-1">
-
-                        </div>
-                        <div class="carousel-item slide-image-bg  item-2">
-
-                        </div>
-                        <!-- <div class="carousel-item item-3">
-
-                        </div> -->
-                        <div class="carousel-item slide-image-bg item-4">
-
-                        </div>
-                        <div class="carousel-item slide-image-bg item-5">
-
-                        </div>
-                        <div class="carousel-item  slide-image-bg item-6">
-                        </div>
-                    </div>
-                    <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
-                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                        <span class="sr-only">Previous</span>
-                    </a>
-                    <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
-                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                        <span class="sr-only">Next</span>
-                    </a>
+    </header>
+    <!-- Clients-->
+    <div class="py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12 col-sm-12">
+                    <marquee><span style="color:red; font-size: 24px">Hurry Up! <a href="#contact">Register here now
+                            </a>for the first ever Live Broadcasted Cricket Tournament ECN Dream XI championship in
+                            Malmö. Last Date to Apply - 23rd July 2020, 12 noon! </span></marquee>
                 </div>
-        </header>
-        <!-- Clients-->
-        <div class="py-5">
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-12 col-sm-12">
-                        <marquee><span style="color:red; font-size: 24px">Hurry Up! <a href="#contact">Register here now </a>for the first ever Live Broadcasted Cricket Tournament ECN Dream XI championship in Malmö. Last Date to Apply - 23rd July 2020, 12 noon! </span></marquee>
+            </div>
+        </div>
+    </div>
+    <!-- Services-->
+    <section class="page-section" id="services">
+        <div class="container">
+            <div class="text-center">
+                <h2 class="section-heading text-uppercase">Events</h2>
+                <h3 class="section-subheading text-muted">Scheduled cricket matches.</h3>
+            </div>
+            <div class="row text-center">
+                <div class="col-md-4">
+                    <span class="fa-stack fa-4x">
+                        <i class="fas fa-circle fa-stack-2x text-primary"></i>
+                        <i class="fas fa-play-circle t fa-stack-1x fa-inverse"></i>
+                    </span>
+                    <h4 class="my-3">Day 1</h4>
+                    <p class="text-muted">3rd August, 2020</p>
+                </div>
+                <div class="col-md-4">
+                    <span class="fa-stack fa-4x">
+                        <i class="fas fa-circle fa-stack-2x text-primary"></i>
+                        <i class="fas fa-laptop fa-stack-1x fa-inverse"></i>
+                    </span>
+                    <h4 class="my-3">Day 2</h4>
+                    <p class="text-muted">4th August, 2020</p>
+                </div>
+                <div class="col-md-4">
+                    <span class="fa-stack fa-4x">
+                        <i class="fas fa-circle fa-stack-2x text-primary"></i>
+                        <i class="fas fa-lock fa-stack-1x fa-inverse"></i>
+                    </span>
+                    <h4 class="my-3">Day 3</h4>
+                    <p class="text-muted">5th August, 2020</p>
+                </div>
+            </div>
+            <div class="row text-center">
+                <div class="col-md-6">
+                    <span class="fa-stack fa-4x">
+                        <i class="fas fa-circle fa-stack-2x text-primary"></i>
+                        <i class="fas fa-shopping-cart fa-stack-1x fa-inverse"></i>
+                    </span>
+                    <h4 class="my-3">Day 4</h4>
+                    <p class="text-muted">6th August, 2020</p>
+                </div>
+                <div class="col-md-6">
+                    <span class="fa-stack fa-4x">
+                        <i class="fas fa-circle fa-stack-2x text-primary"></i>
+                        <i class="fas fa-laptop fa-stack-1x fa-inverse"></i>
+                    </span>
+                    <h4 class="my-3">Day 5</h4>
+                    <p class="text-muted">7th August, 2020</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Portfolio Grid-->
+    <section class="page-section bg-light" id="portfolio">
+        <div class="container">
+            <div class="text-center">
+                <h2 class="section-heading text-uppercase">Videos</h2>
+                <h3 class="section-subheading text-muted">Live streaming of matches would be available here.</h3>
+            </div>
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="portfolio-item">
+                        <iframe width="420" height="315" src="https://www.youtube.com/embed/DnURFrnZsiI">
+                        </iframe>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="portfolio-item">
+                        <iframe width="420" height="315" src="https://www.youtube.com/embed/kldohIQKLB8">
+                        </iframe>
                     </div>
                 </div>
             </div>
         </div>
-        <!-- Services-->
-        <section class="page-section" id="services">
-            <div class="container">
-                <div class="text-center">
-                    <h2 class="section-heading text-uppercase">Events</h2>
-                    <h3 class="section-subheading text-muted">Scheduled cricket matches.</h3>
-                </div>
-                <div class="row text-center">
-                    <div class="col-md-4">
-                        <span class="fa-stack fa-4x">
-                            <i class="fas fa-circle fa-stack-2x text-primary"></i>
-                            <i class="fas fa-play-circle t fa-stack-1x fa-inverse"></i>
-                        </span>
-                        <h4 class="my-3">Day 1</h4>
-                        <p class="text-muted">3rd August, 2020</p>
-                    </div>
-                    <div class="col-md-4">
-                        <span class="fa-stack fa-4x">
-                            <i class="fas fa-circle fa-stack-2x text-primary"></i>
-                            <i class="fas fa-laptop fa-stack-1x fa-inverse"></i>
-                        </span>
-                        <h4 class="my-3">Day 2</h4>
-                        <p class="text-muted">4th August, 2020</p>
-                    </div>
-                    <div class="col-md-4">
-                        <span class="fa-stack fa-4x">
-                            <i class="fas fa-circle fa-stack-2x text-primary"></i>
-                            <i class="fas fa-lock fa-stack-1x fa-inverse"></i>
-                        </span>
-                        <h4 class="my-3">Day 3</h4>
-                        <p class="text-muted">5th August, 2020</p>
-                    </div>
-                </div>
-                <div class="row text-center">
-                    <div class="col-md-6">
-                        <span class="fa-stack fa-4x">
-                            <i class="fas fa-circle fa-stack-2x text-primary"></i>
-                            <i class="fas fa-shopping-cart fa-stack-1x fa-inverse"></i>
-                        </span>
-                        <h4 class="my-3">Day 4</h4>
-                        <p class="text-muted">6th August, 2020</p>
-                    </div>
-                    <div class="col-md-6">
-                        <span class="fa-stack fa-4x">
-                            <i class="fas fa-circle fa-stack-2x text-primary"></i>
-                            <i class="fas fa-laptop fa-stack-1x fa-inverse"></i>
-                        </span>
-                        <h4 class="my-3">Day 5</h4>
-                        <p class="text-muted">7th August, 2020</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <!-- Portfolio Grid-->
-        <section class="page-section bg-light" id="portfolio">
-            <div class="container">
-                <div class="text-center">
-                    <h2 class="section-heading text-uppercase">Videos</h2>
-                    <h3 class="section-subheading text-muted">Live streaming of matches would be available here.</h3>
-                </div>
+    </section>
+    <!-- About-->
+    <section class="page-section  bg-light" id="ecn-about">
+        <div class="container">
+            <div class="text-center">
+                <h2 class="section-heading text-uppercase">ECN</h2>
                 <div class="row">
-                    <div class="col-md-6">
-                        <div class="portfolio-item">
-                            <iframe width="420" height="315"
-                                    src="https://www.youtube.com/embed/DnURFrnZsiI" >
-                            </iframe>
-                        </div>
+                    <div class="col-lg-12 ml-auto">
+                        <h5>ECN 2020 Malmo</h5>
+                        <p class="lead text-left" style="font-size: 17px">
+                            Malmöhus Cricket Club is one of the best clubs in Sweden. They have been given the hosting
+                            rights for organizing
+                            ECN Dream X1 2020 tournament in Malmö in August
+                            Our team of organizers, marketing, operations, software development and cricketing
+                            professionals boast over
+                            two decades of expertise.
+                        </p>
                     </div>
-                    <div class="col-md-6">
-                        <div class="portfolio-item">
-                            <iframe width="420" height="315"
-                                    src="https://www.youtube.com/embed/kldohIQKLB8">
-                            </iframe>
-                        </div>
+                    <div class="col-lg-12 ml-auto">
+                        <h5>The European Cricket League</h5>
+                        <p class="lead text-left" style="font-size: 17px">
+                            The European Cricket League is the Champions League of European cricket. The domestic league
+                            champion clubs from the International Cricket Council (ICC) member federations of Sweden,
+                            Denmark, France, Germany, Italy, Netherlands, Romania, Russia and Spain compete to be
+                            crowned the
+                            "Kings of Cricket" in the ECL as Europe's premier club competition.
+                            In the short term, the ECL is focussed on shining as the highlight of the European
+                            cricketing calendar.
+                            In the long term, the team's target is for cricket to become Europe's number one summer bat
+                            and ball team sport.
+                            The ECL strives to ignite club and grassroots cricket around Europe, motivate current
+                            cricketers in Europe to
+                            play today, and inspire parents in Europe to introduce their children to cricket to help
+                            grow the game tomorrow.
+                            The 2019 edition of the ECL (ECL19) was viewed on live TV & streamed around the world in
+                            over 120 countries in
+                            more than 140 million households by over 40 broadcasters.
+                            Our team of sports marketing, broadcast and media professionals boast over two decades of
+                            expertise.
+                        </p>
                     </div>
-                </div>
-            </div>
-        </section>
-        <!-- About-->
-        <section class="page-section  bg-light" id="ecn-about" >
-            <div class="container">
-                <div class="text-center">
-                    <h2 class="section-heading text-uppercase">ECN</h2>
-                    <div class="row">
-                        <div class="col-lg-12 ml-auto">
-                            <h5>ECN 2020 Malmo</h5>
-                            <p class="lead text-left" style="font-size: 17px">
-                                Malmöhus Cricket Club is one of the best clubs in Sweden. They have been given the hosting rights for organizing
-                                ECN Dream X1 2020 tournament in Malmö in August
-                            Our team of organizers, marketing, operations, software development and cricketing professionals boast over
-                                two decades of expertise.
-                            </p>
-                        </div>
-                        <div class="col-lg-12 ml-auto">
-                            <h5>The European Cricket League</h5>
-                            <p class="lead text-left" style="font-size: 17px">
-                                The European Cricket League is the Champions League of European cricket. The domestic league champion clubs from the International Cricket Council (ICC) member federations of Sweden,
-                                Denmark, France, Germany, Italy, Netherlands, Romania, Russia and Spain compete to be crowned the
-                                "Kings of Cricket" in the ECL as Europe's premier club competition.
-                                In the short term, the ECL is focussed on shining as the highlight of the European cricketing calendar.
-                                In the long term, the team's target is for cricket to become Europe's number one summer bat and ball team sport.
-                                The ECL strives to ignite club and grassroots cricket around Europe, motivate current cricketers in Europe to
-                                play today, and inspire parents in Europe to introduce their children to cricket to help grow the game tomorrow.
-                                The 2019 edition of the ECL (ECL19) was viewed on live TV & streamed around the world in over 120 countries in
-                                more than 140 million households by over 40 broadcasters.
-                            Our team of sports marketing, broadcast and media professionals boast over two decades of expertise.
-                            </p>
-                        </div>
-                        <div class="col-lg-12 ml-auto">
-                            <h5>Crew Members</h5>
+                    <div class="col-lg-12 ml-auto">
+                        <h5>Crew Members</h5>
                         <div class="row">
                             <div class="col-sm-3">
-                              <div class="team-member">
-                                <div class="mx-auto rounded-circle ankit crew"></div>
-                                <h4>Ankit Gupta</h4>
-                                <div class="text-muted">President</div>
-                                <ul class="text-left" style="font-size: 12px">
-                                    <li>Organizing Committee Head</li>  
-                                    <li>10+ years of Cricketing Management Experience,</li>  
-                                    <li>Have been a board member of Cyprus Cricket Association</li> 
-                                </ul>
-                              </div>
-                            </div>
-                            <div class="col-sm-3">
-                              <div class="team-member">
-                                <div class="mx-auto rounded-circle david crew"></div>
-                                <h4>David Williman</h4>
-                                <div class="text-muted">Sports Director</div>
-                                <ul class="text-left" style="font-size: 12px">
-                                    <li>Level  3 ICC coach</li>
-                                    <li>Partner and director of DRCricketAcademy (indoor cricket centre)</li>
-                                    <li>Owner of DRW Cricket (coaching and equipment sales)</li>
-                                    <li>Sweden  U19 and  Ladies coach</li>
-                                    <li>Malmöhus CC club coach</li>
-                                    <li>Many years working in marketing, sport sponsorship and events</li>
-                                </ul>
-                              </div>
-                            </div>
-                            <div class="col-sm-3">
-                              <div class="team-member">
-                              <div class="mx-auto rounded-circle crew marie"></div>
-                                <h4>Marie Williman</h4>
-                                <div class="text-muted">Ladies Cricket Development Manager</div>
-                                <ul class="text-left" style="font-size: 12px">                                   
-                                    <li>Founder of Malmöhus ladies Cricket team and member of SCF womens Committee.</li> 
-                                    <li>SM indoor cricket champions 2020.</li>
-                                    <li>Many years experience working in Corporate  hospitality.</li>
-                                </ul>
-                              </div>
+                                <div class="team-member">
+                                    <div class="mx-auto rounded-circle ankit crew"></div>
+                                    <h4>Ankit Gupta</h4>
+                                    <div class="text-muted">President</div>
+                                    <ul class="text-left" style="font-size: 12px">
+                                        <li>Organizing Committee Head</li>
+                                        <li>10+ years of Cricketing Management Experience,</li>
+                                        <li>Have been a board member of Cyprus Cricket Association</li>
+                                    </ul>
+                                </div>
                             </div>
                             <div class="col-sm-3">
                                 <div class="team-member">
-                                  <div class="mx-auto rounded-circle shailesh crew"></div>
-                                  <h4>Shailesh Patel</h4>
-                                  <div class="text-muted">Chief Technology Officer</div>
-                                  <ul class="text-left" style="font-size: 12px">
-                                    <li>10+ years of IT expertise</li>  
-                                  </ul>
+                                    <div class="mx-auto rounded-circle david crew"></div>
+                                    <h4>David Williman</h4>
+                                    <div class="text-muted">Sports Director</div>
+                                    <ul class="text-left" style="font-size: 12px">
+                                        <li>Level 3 ICC coach</li>
+                                        <li>Partner and director of DRCricketAcademy (indoor cricket centre)</li>
+                                        <li>Owner of DRW Cricket (coaching and equipment sales)</li>
+                                        <li>Sweden U19 and Ladies coach</li>
+                                        <li>Malmöhus CC club coach</li>
+                                        <li>Many years working in marketing, sport sponsorship and events</li>
+                                    </ul>
                                 </div>
-                              </div>
-                              <div class="col-sm-3">
+                            </div>
+                            <div class="col-sm-3">
                                 <div class="team-member">
-                                  <div class="mx-auto rounded-circle sambit crew"></div>
-                                  <h4>Sambit Pattanaik</h4>
-                                  <div class="text-muted">Operations Manager</div>
-                                  <ul class="text-left" style="font-size: 12px">
-                                    <li>Club Cricketer from Malmö , Sweden , plays for Malmöhus cricket club</li>  
-                                  </ul>
+                                    <div class="mx-auto rounded-circle crew marie"></div>
+                                    <h4>Marie Williman</h4>
+                                    <div class="text-muted">Ladies Cricket Development Manager</div>
+                                    <ul class="text-left" style="font-size: 12px">
+                                        <li>Founder of Malmöhus ladies Cricket team and member of SCF womens Committee.
+                                        </li>
+                                        <li>SM indoor cricket champions 2020.</li>
+                                        <li>Many years experience working in Corporate hospitality.</li>
+                                    </ul>
                                 </div>
-                              </div>
-                              <div class="col-sm-3">
+                            </div>
+                            <div class="col-sm-3">
                                 <div class="team-member">
-                                  <div class="mx-auto rounded-circle ashish crew"></div>
-                                  <h4>Ashish Rajput</h4>
-                                  <div class="text-muted">Security and Complaince Manager</div>
-                                  <ul class="text-left" style="font-size: 12px">
-                                    <li>Experienced Management Consultant</li>
-                                  </ul>
+                                    <div class="mx-auto rounded-circle shailesh crew"></div>
+                                    <h4>Shailesh Patel</h4>
+                                    <div class="text-muted">Chief Technology Officer</div>
+                                    <ul class="text-left" style="font-size: 12px">
+                                        <li>10+ years of IT expertise</li>
+                                    </ul>
                                 </div>
-                              </div>
-                              <div class="col-sm-3">
+                            </div>
+                            <div class="col-sm-3">
                                 <div class="team-member">
-                                  <div class="mx-auto rounded-circle crew khurram"></div>
-                                  <h4>Khurram Shahzad</h4>
-                                  <div class="text-muted">Operations Manager</div>
-                                  <ul class="text-left" style="font-size: 12px">
-                                    <li>15 years of Management Experience</li>  
-                                  </ul>
+                                    <div class="mx-auto rounded-circle sambit crew"></div>
+                                    <h4>Sambit Pattanaik</h4>
+                                    <div class="text-muted">Operations Manager</div>
+                                    <ul class="text-left" style="font-size: 12px">
+                                        <li>Club Cricketer from Malmö , Sweden , plays for Malmöhus cricket club</li>
+                                    </ul>
                                 </div>
-                              </div>
-                              <div class="col-sm-3">
+                            </div>
+                            <div class="col-sm-3">
                                 <div class="team-member">
-                                  <div class="mx-auto rounded-circle vishrut crew"></div>
-                                  <h4>Vishrut Krashak</h4>
-                                  <div class="text-muted">Resource Manager</div>
-                                  <ul class="text-left" style="font-size: 12px">
-                                    <li>5+ years of Management Experience</li>  
-                                    <li>Board Member of Malmohus Cricket</li>
-                                  </ul>
+                                    <div class="mx-auto rounded-circle ashish crew"></div>
+                                    <h4>Ashish Rajput</h4>
+                                    <div class="text-muted">Security and Complaince Manager</div>
+                                    <ul class="text-left" style="font-size: 12px">
+                                        <li>Experienced Management Consultant</li>
+                                    </ul>
                                 </div>
-                              </div>
-                          </div>
-                          </div>
+                            </div>
+                            <div class="col-sm-3">
+                                <div class="team-member">
+                                    <div class="mx-auto rounded-circle crew khurram"></div>
+                                    <h4>Khurram Shahzad</h4>
+                                    <div class="text-muted">Operations Manager</div>
+                                    <ul class="text-left" style="font-size: 12px">
+                                        <li>15 years of Management Experience</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="col-sm-3">
+                                <div class="team-member">
+                                    <div class="mx-auto rounded-circle vishrut crew"></div>
+                                    <h4>Vishrut Krashak</h4>
+                                    <div class="text-muted">Resource Manager</div>
+                                    <ul class="text-left" style="font-size: 12px">
+                                        <li>5+ years of Management Experience</li>
+                                        <li>Board Member of Malmohus Cricket</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="col-sm-3">
+                                <div class="team-member">
+                                    <div class="mx-auto rounded-circle crew trupti"></div>
+                                    <h4>Trupti Gaonkar</h4>
+                                    <div class="text-muted">Lead Web Developer</div>
+                                    <ul class="text-left" style="font-size: 12px">
+                                        <li>Indian domestic cricket player</li>
+                                        <li>SM indoor cricket champions 2020.</li>
+                                        <li>10+ years of IT expertise</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
-
- 
-                </section>
-
-        </section>
-        <!-- About-->
-        <section class="page-section" id="about">
-            <div class="container">
-                <div class="text-center">
-                    <h2 class="section-heading text-uppercase">Malmöhus Club</h2>
-                    <h3 class="section-subheading text-muted">
-                        Malmöhus cricket Club was founded in 1993 by Samath Ohlén, Eric Folker och Ramesh Paul. The idea was that everybody who was interested to play the game of cricket was welcome to join, young and old, boys and girls. Integration between different cultures and countries is a cornerstone of our club. The club currently has members from 12 different nationalities, something that we are proud of. We welcome everyone who is interested in being a part of our club. We currently offer the following activities;
-                        <dl>
-                            <dt>Coaching for beginners, boys and girls</dt>
-                            <dt>Cooperation with DR cricket center in Malmö, coaching and indoor facilities ( nets, Bowling machines) all year round.</dt>
-                            <dt>Elite team that plays around 30 matches per season ( T- 20 and 50 over format )</dt>
-                            <dt>A second team that is mixed by youngsters and more experienced players, plays around 20 matches a season ( T-20 and 30 overs format )</dt>
-                            <dt>Old boys cricket for those who are above 40 years old, approx 10 games per season</dt>
-                            <dt>First ladies cricket team in the Skåne region</dt>
-                            <dt>Kids team ( all ages) that is growing in number</dt>
-                            <dt>First ladies cricket team in the Skåne region</dt>
-                            <dt>Outdoor practice Tuesdays and Thursdays from 17,30 – 20,00 at Limhamnsfältet (For senior teams during the season)</dt>
-                            <dt>Indoor practice at DR cricket centre from October to April (for senior teams during the winter)</dt>
-                            <dt>See other pages on the website for details of ladies and junior cricket times</dt>
-                            <dt>Different social events all year round</dt>
-                        </dl>
-                    </h3>
-                </div>
-
             </div>
-        </section>
-        <!-- Team-->
-<!--        <section class="page-section bg-light" id="team">-->
-<!--            <div class="container">-->
-<!--                <div class="text-center">-->
-<!--                    <h2 class="section-heading text-uppercase">Our Amazing Teams</h2>-->
-<!--                    <h3 class="section-subheading text-muted">Teams are here</h3>-->
-<!--                </div>-->
-<!--                <div class="row">-->
-<!--                    <div class="col-lg-4">-->
-<!--                        <div class="team-member">-->
-<!--                            <img class="mx-auto rounded-circle" src="assets/img/team/1.jpeg" alt="" />-->
-<!--                            <h4>Team 1</h4>-->
-<!--                            <p class="text-muted">Address</p>-->
-<!--                            <a class="btn btn-dark btn-social mx-2" href="#!"><i class="fab fa-twitter"></i></a>-->
-<!--                            <a class="btn btn-dark btn-social mx-2" href="#!"><i class="fab fa-facebook-f"></i></a>-->
-<!--                            <a class="btn btn-dark btn-social mx-2" href="#!"><i class="fab fa-linkedin-in"></i></a>-->
-<!--                        </div>-->
-<!--                    </div>-->
-<!--                    <div class="col-lg-4">-->
-<!--                        <div class="team-member">-->
-<!--                            <img class="mx-auto rounded-circle" src="assets/img/team/2.jpg" alt="" />-->
-<!--                            <h4>Team 2</h4>-->
-<!--                            <p class="text-muted">Address</p>-->
-<!--                            <a class="btn btn-dark btn-social mx-2" href="#!"><i class="fab fa-twitter"></i></a>-->
-<!--                            <a class="btn btn-dark btn-social mx-2" href="#!"><i class="fab fa-facebook-f"></i></a>-->
-<!--                            <a class="btn btn-dark btn-social mx-2" href="#!"><i class="fab fa-linkedin-in"></i></a>-->
-<!--                        </div>-->
-<!--                    </div>-->
-<!--                    <div class="col-lg-4">-->
-<!--                        <div class="team-member">-->
-<!--                            <img class="mx-auto rounded-circle" src="assets/img/team/3.jpg" alt="" />-->
-<!--                            <h4>Team 3</h4>-->
-<!--                            <p class="text-muted">Address</p>-->
-<!--                            <a class="btn btn-dark btn-social mx-2" href="#!"><i class="fab fa-twitter"></i></a>-->
-<!--                            <a class="btn btn-dark btn-social mx-2" href="#!"><i class="fab fa-facebook-f"></i></a>-->
-<!--                            <a class="btn btn-dark btn-social mx-2" href="#!"><i class="fab fa-linkedin-in"></i></a>-->
-<!--                        </div>-->
-<!--                    </div>-->
-<!--                </div>-->
-<!--                <div class="row">-->
-<!--                    <div class="col-lg-8 mx-auto text-center"><p class="large text-muted">Selected teams for tournament.</p></div>-->
-<!--                </div>-->
-<!--            </div>-->
-<!--        </section>-->
-        <!-- Clients-->
-        <div class="py-5 bg-light">
-            <div class="container">
-                <div class="text-center">
-                    <h2 class="section-heading text-uppercase">Our Sponsors</h2>
+
+
+    </section>
+
+    </section>
+    <!-- About-->
+    <section class="page-section" id="about">
+        <div class="container">
+            <div class="text-center">
+                <h2 class="section-heading text-uppercase">Malmöhus Club</h2>
+                <h3 class="section-subheading text-muted">
+                    Malmöhus cricket Club was founded in 1993 by Samath Ohlén, Eric Folker och Ramesh Paul. The idea was
+                    that everybody who was interested to play the game of cricket was welcome to join, young and old,
+                    boys and girls. Integration between different cultures and countries is a cornerstone of our club.
+                    The club currently has members from 12 different nationalities, something that we are proud of. We
+                    welcome everyone who is interested in being a part of our club. We currently offer the following
+                    activities;
+                    <dl>
+                        <dt>Coaching for beginners, boys and girls</dt>
+                        <dt>Cooperation with DR cricket center in Malmö, coaching and indoor facilities ( nets, Bowling
+                            machines) all year round.</dt>
+                        <dt>Elite team that plays around 30 matches per season ( T- 20 and 50 over format )</dt>
+                        <dt>A second team that is mixed by youngsters and more experienced players, plays around 20
+                            matches a season ( T-20 and 30 overs format )</dt>
+                        <dt>Old boys cricket for those who are above 40 years old, approx 10 games per season</dt>
+                        <dt>First ladies cricket team in the Skåne region</dt>
+                        <dt>Kids team ( all ages) that is growing in number</dt>
+                        <dt>First ladies cricket team in the Skåne region</dt>
+                        <dt>Outdoor practice Tuesdays and Thursdays from 17,30 – 20,00 at Limhamnsfältet (For senior
+                            teams during the season)</dt>
+                        <dt>Indoor practice at DR cricket centre from October to April (for senior teams during the
+                            winter)</dt>
+                        <dt>See other pages on the website for details of ladies and junior cricket times</dt>
+                        <dt>Different social events all year round</dt>
+                    </dl>
+                </h3>
+            </div>
+
+        </div>
+    </section>
+    <!-- Team-->
+    <!--        <section class="page-section bg-light" id="team">-->
+    <!--            <div class="container">-->
+    <!--                <div class="text-center">-->
+    <!--                    <h2 class="section-heading text-uppercase">Our Amazing Teams</h2>-->
+    <!--                    <h3 class="section-subheading text-muted">Teams are here</h3>-->
+    <!--                </div>-->
+    <!--                <div class="row">-->
+    <!--                    <div class="col-lg-4">-->
+    <!--                        <div class="team-member">-->
+    <!--                            <img class="mx-auto rounded-circle" src="assets/img/team/1.jpeg" alt="" />-->
+    <!--                            <h4>Team 1</h4>-->
+    <!--                            <p class="text-muted">Address</p>-->
+    <!--                            <a class="btn btn-dark btn-social mx-2" href="#!"><i class="fab fa-twitter"></i></a>-->
+    <!--                            <a class="btn btn-dark btn-social mx-2" href="#!"><i class="fab fa-facebook-f"></i></a>-->
+    <!--                            <a class="btn btn-dark btn-social mx-2" href="#!"><i class="fab fa-linkedin-in"></i></a>-->
+    <!--                        </div>-->
+    <!--                    </div>-->
+    <!--                    <div class="col-lg-4">-->
+    <!--                        <div class="team-member">-->
+    <!--                            <img class="mx-auto rounded-circle" src="assets/img/team/2.jpg" alt="" />-->
+    <!--                            <h4>Team 2</h4>-->
+    <!--                            <p class="text-muted">Address</p>-->
+    <!--                            <a class="btn btn-dark btn-social mx-2" href="#!"><i class="fab fa-twitter"></i></a>-->
+    <!--                            <a class="btn btn-dark btn-social mx-2" href="#!"><i class="fab fa-facebook-f"></i></a>-->
+    <!--                            <a class="btn btn-dark btn-social mx-2" href="#!"><i class="fab fa-linkedin-in"></i></a>-->
+    <!--                        </div>-->
+    <!--                    </div>-->
+    <!--                    <div class="col-lg-4">-->
+    <!--                        <div class="team-member">-->
+    <!--                            <img class="mx-auto rounded-circle" src="assets/img/team/3.jpg" alt="" />-->
+    <!--                            <h4>Team 3</h4>-->
+    <!--                            <p class="text-muted">Address</p>-->
+    <!--                            <a class="btn btn-dark btn-social mx-2" href="#!"><i class="fab fa-twitter"></i></a>-->
+    <!--                            <a class="btn btn-dark btn-social mx-2" href="#!"><i class="fab fa-facebook-f"></i></a>-->
+    <!--                            <a class="btn btn-dark btn-social mx-2" href="#!"><i class="fab fa-linkedin-in"></i></a>-->
+    <!--                        </div>-->
+    <!--                    </div>-->
+    <!--                </div>-->
+    <!--                <div class="row">-->
+    <!--                    <div class="col-lg-8 mx-auto text-center"><p class="large text-muted">Selected teams for tournament.</p></div>-->
+    <!--                </div>-->
+    <!--            </div>-->
+    <!--        </section>-->
+    <!-- Clients-->
+    <div class="py-5 bg-light">
+        <div class="container">
+            <div class="text-center">
+                <h2 class="section-heading text-uppercase">Our Sponsors</h2>
+            </div>
+            <div class="row">
+                <div class="col-md-4 col-sm-4 my-4">
+                    <a href="https://idrottonline.se/MalmohusCricketClub-Cricket/"><img
+                            class="img-fluid d-block mx-auto" src="assets/img/logos/logo.1.png"
+                            style="height: 115px!important;" alt="Malmöhus Cricket Club" /></a>
                 </div>
-                <div class="row">
-                    <div class="col-md-4 col-sm-4 my-4">
-                        <a href="https://idrottonline.se/MalmohusCricketClub-Cricket/"><img class="img-fluid d-block mx-auto" src="assets/img/logos/logo.1.png" style="height: 115px!important;" alt="Malmöhus Cricket Club" /></a>
-                    </div>
-                    <div class="col-md-4 col-sm-4 my-4">
-                        <a href="https://www.goldfinchcricket.com"><img class="img-fluid d-block mx-auto"  style="height: 115px!important;" src="assets/img/logos/goldfinch.png" alt="Goldfinch Cricket" /></a>
-                    </div>
-                    <div class="col-md-4 col-sm-4 my-4">
-                        <a href="https://www.facebook.com/drwcricket"><img class="img-fluid d-block mx-auto"  style="height: 115px!important;" src="assets/img/logos/drw.png" alt="DRW Cricket" /></a>
-                    </div>
+                <div class="col-md-4 col-sm-4 my-4">
+                    <a href="https://www.goldfinchcricket.com"><img class="img-fluid d-block mx-auto"
+                            style="height: 115px!important;" src="assets/img/logos/goldfinch.png"
+                            alt="Goldfinch Cricket" /></a>
+                </div>
+                <div class="col-md-4 col-sm-4 my-4">
+                    <a href="https://www.facebook.com/drwcricket"><img class="img-fluid d-block mx-auto"
+                            style="height: 115px!important;" src="assets/img/logos/drw.png" alt="DRW Cricket" /></a>
                 </div>
             </div>
         </div>
-        <!-- Contact-->
-        <section class="page-section" id="contact">
-            <div class="container">
-                <div class="text-center">
-                    <h2 class="section-heading text-uppercase">Registration</h2>
-                    <h3 class="section-subheading text-muted">Contact us to register your team.</h3>
-                </div>
-                <form id="contactForm" name="sentMessage" onSubmit="handleClick()">
-                    <div class="row align-items-stretch mb-5">
-                        <div class="col-md-6">
-                            <div class="form-group">
-                                <input class="form-control" id="name" type="text" placeholder="Team name *" required="required" data-validation-required-message="Please enter your name." />
-                                <p class="help-block text-danger"></p>
-                            </div>
-                            <div class="form-group">
-                                <input class="form-control" id="email" type="email" placeholder="Your Email *" required="required" data-validation-required-message="Please enter your email address." />
-                                <p class="help-block text-danger"></p>
-                            </div>
-                            <div class="form-group mb-md-0">
-                                <input class="form-control" id="phone" type="tel" placeholder="Your Phone *" required="required" data-validation-required-message="Please enter your phone number." />
-                                <p class="help-block text-danger"></p>
-                            </div>
-                        </div>
-                        <div class="col-md-6">
-                            <div class="form-group form-group-textarea mb-md-0">
-                                <textarea class="form-control" id="message" placeholder="Your Message *" required="required" data-validation-required-message="Please enter a message."></textarea>
-                                <p class="help-block text-danger"></p>
-                            </div>
-                        </div>
-                        <div style="color: #ffffff" class="col-md-12">
-                            <div>
-                                <small>
-                                    <br/>
-                                    Note: By Registering here shows your interest to participate
-                                    in the ECN Tournament to be conducted in Malmö from 3rd Aug - 7th Aug. Registration does not mean an automatic selection of the team for the event.
-                                    We will make a decision on your application and respond
-                                    back to you on whether your application has been successful for the event or not.
-                                    Once your club is selected you will have to do the complete player registration on
-                                    our website and pay an entry fees of 2,500 SEK within 24 hour.
-                                    The communication will be sent to your registered mail ID.
-                                    For the teams selected,if they fail to comply with the player registration details or entry
-                                    fee payment timeline,the next team in the list will be considered over the teams missing the deadline.
-                                </small>
-                                <br/>
-                                <br/>
-                            </div>
-                            <div class="form-check form-check-inline">
-                                <input class="form-check-input" type="checkbox" id="terms-condition" data-validation-required-message="Please accept the conditions." required>
-                                <label class="form-check-label" for="terms-condition"> &nbsp;I hereby agree on above condition</a></label>
-                                <p class="help-block text-danger"></p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="text-center">
-                        <div id="success"></div>
-                        <button class="btn btn-primary btn-xl text-uppercase" id="sendMessageButton" type="submit">Register</button>
-                    </div>
-                </form>
+    </div>
+    <!-- Contact-->
+    <section class="page-section" id="contact">
+        <div class="container">
+            <div class="text-center">
+                <h2 class="section-heading text-uppercase">Registration</h2>
+                <h3 class="section-subheading text-muted">Contact us to register your team.</h3>
             </div>
-        </section>
-        <!-- Footer-->
-        <footer class="footer py-4">
-            <div class="container">
-                <div class="row align-items-center">
-                    <div class="col-lg-4 text-lg-left">Copyright © Malmöhus 2020</div>
-                    <div class="col-lg-4 my-3 my-lg-0">
-                        <a class="btn btn-dark btn-social mx-2" href="#!"><i class="fab fa-twitter"></i></a>
-                        <a class="btn btn-dark btn-social mx-2" href="#!"><i class="fab fa-facebook-f"></i></a>
-                        <a class="btn btn-dark btn-social mx-2" href="#!"><i class="fab fa-linkedin-in"></i></a>
-                    </div>
-                    <div class="col-lg-4 text-lg-right">
-                        <a class="mr-3" href="#!">Privacy Policy</a>
-                        <a href="#!">Terms of Use</a>
-                    </div>
-                </div>
-            </div>
-        </footer>
-        <!-- Bootstrap core JS-->
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.bundle.min.js"></script>
-        <!-- Third party plugin JS-->
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
-        <!-- Contact form JS-->
-        <script src="assets/mail/jqBootstrapValidation.js"></script>
-        <script src="assets/mail/contact_me.js"></script>
-        <!-- Core theme JS-->
-        <script src="js/scripts.js"></script>
-    </body>
-
-
-    <div class="modal fade bd-example-modal-lg" id="registration" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
-        <div  class="modal-dialog modal-lg" role="document">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLabel">Request for team registration</h5>
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                    </button>
-                </div>
-
-                <form id="teamRegistrationForm" name="sentRegistrationRequest">
-                <div class="modal-body">
-                        <div class="row">
-                            <div class="form-group col-md-6">
-                                <label for="team-name" class="col-form-label">Team Name</label>
-                                <input type="text" class="form-control" id="team-name" required>
-                            </div>
-                            <div class="form-group col-md-6">
-                                <label for="captain-name" class="col-form-label">Captain Name</label>
-                                <input type="text" class="form-control" id="captain-name" required>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="form-group col-md-6">
-                                <label for="captain-email" class="col-form-label">Email</label>
-                                <input type="text" class="form-control" id="captain-email" required>
-                            </div>
-                            <div class="form-group col-md-6">
-                                    <label for="contact-number" class="col-form-label">WhatsApp No</label>
-                                    <input type="text" class="form-control" id="contact-number" required>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="form-group col-md-6">
-                                <label for="player-1" class="col-form-label">Player 1</label>
-                                <input type="text" class="form-control" id="player-1" required>
-                            </div>
-                            <div class="form-group col-md-6">
-                                <label for="jersey-1" class="col-form-label">Jersey no</label>
-                                <input type="text" class="form-control" id="jersey-1" required>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="form-group col-md-6">
-                                <label for="player-2" class="col-form-label" required="required">Player 2</label>
-                                <input type="text" class="form-control" id="player-2">
-                            </div>
-                            <div class="form-group col-md-6">
-                                <label for="jersey-3" class="col-form-label">Jersey no</label>
-                                <input type="text" class="form-control" id="jersey-2" required>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="form-group col-md-6">
-                                <label for="player-3" class="col-form-label" required="required">Player 3</label>
-                                <input type="text" class="form-control" id="player-3">
-                            </div>
-                            <div class="form-group col-md-6">
-                                <label for="jersey-3" class="col-form-label">Jersey no</label>
-                                <input type="text" class="form-control" id="jersey-3" required>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="form-group col-md-6">
-                                <label for="player-4" class="col-form-label">Player 4</label>
-                                <input type="text" class="form-control" id="player-4" required>
-                            </div>
-                            <div class="form-group col-md-6">
-                                <label for="jersey-4" class="col-form-label">Jersey no</label>
-                                <input type="text" class="form-control" id="jersey-4" required>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="form-group col-md-6">
-                                <label for="player-5" class="col-form-label">Player 5</label>
-                                <input type="text" class="form-control" id="player-5" required>
-                            </div>
-                            <div class="form-group col-md-6">
-                                <label for="jersey-5" class="col-form-label">Jersey no</label>
-                                <input type="text" class="form-control" id="jersey-5" required>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="form-group col-md-6">
-                                <label for="player-6" class="col-form-label">Player 6</label>
-                                <input type="text" class="form-control" id="player-6" required>
-                            </div>
-                            <div class="form-group col-md-6">
-                                <label for="jersey-6" class="col-form-label">Jersey no</label>
-                                <input type="text" class="form-control" id="jersey-6" required>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="form-group col-md-6">
-                                <label for="player-7" class="col-form-label">Player 7</label>
-                                <input type="text" class="form-control" id="player-7" required>
-                            </div>
-                            <div class="form-group col-md-6">
-                                <label for="jersey-7" class="col-form-label">Jersey no</label>
-                                <input type="text" class="form-control" id="jersey-7" required>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="form-group col-md-6">
-                                <label for="player-8" class="col-form-label">Player 8</label>
-                                <input type="text" class="form-control" id="player-8" required>
-                            </div>
-                            <div class="form-group col-md-6">
-                                <label for="jersey-8" class="col-form-label">Jersey no</label>
-                                <input type="text" class="form-control" id="jersey-8" required>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="form-group col-md-6">
-                                <label for="player-9" class="col-form-label">Player 9</label>
-                                <input type="text" class="form-control" id="player-9" required>
-                            </div>
-                            <div class="form-group col-md-6">
-                                <label for="jersey-9" class="col-form-label">Jersey no</label>
-                                <input type="text" class="form-control" id="jersey-9" required>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="form-group col-md-6">
-                                <label for="player-10" class="col-form-label">Player 10</label>
-                                <input type="text" class="form-control" id="player-10" required>
-                            </div>
-                            <div class="form-group col-md-6">
-                                <label for="jersey-10" class="col-form-label">Jersey no</label>
-                                <input type="text" class="form-control" id="jersey-10" required>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="form-group col-md-6">
-                                <label for="player-11" class="col-form-label">Player 11</label>
-                                <input type="text" class="form-control" id="player-11" required>
-                            </div>
-                            <div class="form-group col-md-6">
-                                <label for="jersey-11" class="col-form-label">Jersey no</label>
-                                <input type="text" class="form-control" id="jersey-11" required>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="form-group col-md-6">
-                                <label for="player-12" class="col-form-label">Player 12(Optional)</label>
-                                <input type="text" class="form-control" id="player-12">
-                            </div>
-                            <div class="form-group col-md-6">
-                                <label for="jersey-12" class="col-form-label">Jersey no</label>
-                                <input type="text" class="form-control" id="jersey-12">
-                            </div>
+            <form id="contactForm" name="sentMessage" onSubmit="handleClick()">
+                <div class="row align-items-stretch mb-5">
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <input class="form-control" id="name" type="text" placeholder="Team name *"
+                                required="required" data-validation-required-message="Please enter your name." />
+                            <p class="help-block text-danger"></p>
                         </div>
                         <div class="form-group">
-                            <label for="message-text" class="col-form-label">Message:</label>
-                            <textarea class="form-control" id="message-text" required="required"></textarea>
+                            <input class="form-control" id="email" type="email" placeholder="Your Email *"
+                                required="required"
+                                data-validation-required-message="Please enter your email address." />
+                            <p class="help-block text-danger"></p>
                         </div>
+                        <div class="form-group mb-md-0">
+                            <input class="form-control" id="phone" type="tel" placeholder="Your Phone *"
+                                required="required"
+                                data-validation-required-message="Please enter your phone number." />
+                            <p class="help-block text-danger"></p>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="form-group form-group-textarea mb-md-0">
+                            <textarea class="form-control" id="message" placeholder="Your Message *" required="required"
+                                data-validation-required-message="Please enter a message."></textarea>
+                            <p class="help-block text-danger"></p>
+                        </div>
+                    </div>
+                    <div style="color: #ffffff" class="col-md-12">
+                        <div>
+                            <small>
+                                <br />
+                                Note: By Registering here shows your interest to participate
+                                in the ECN Tournament to be conducted in Malmö from 3rd Aug - 7th Aug. Registration does
+                                not mean an automatic selection of the team for the event.
+                                We will make a decision on your application and respond
+                                back to you on whether your application has been successful for the event or not.
+                                Once your club is selected you will have to do the complete player registration on
+                                our website and pay an entry fees of 2,500 SEK within 24 hour.
+                                The communication will be sent to your registered mail ID.
+                                For the teams selected,if they fail to comply with the player registration details or
+                                entry
+                                fee payment timeline,the next team in the list will be considered over the teams missing
+                                the deadline.
+                            </small>
+                            <br />
+                            <br />
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="checkbox" id="terms-condition"
+                                data-validation-required-message="Please accept the conditions." required>
+                            <label class="form-check-label" for="terms-condition"> &nbsp;I hereby agree on above
+                                condition</a></label>
+                            <p class="help-block text-danger"></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="text-center">
+                    <div id="success"></div>
+                    <button class="btn btn-primary btn-xl text-uppercase" id="sendMessageButton"
+                        type="submit">Register</button>
+                </div>
+            </form>
+        </div>
+    </section>
+    <!-- Footer-->
+    <footer class="footer py-4">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-4 text-lg-left">Copyright © Malmöhus 2020</div>
+                <div class="col-lg-4 my-3 my-lg-0">
+                    <a class="btn btn-dark btn-social mx-2" href="#!"><i class="fab fa-twitter"></i></a>
+                    <a class="btn btn-dark btn-social mx-2" href="#!"><i class="fab fa-facebook-f"></i></a>
+                    <a class="btn btn-dark btn-social mx-2" href="#!"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+                <div class="col-lg-4 text-lg-right">
+                    <a class="mr-3" href="#!">Privacy Policy</a>
+                    <a href="#!">Terms of Use</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- Bootstrap core JS-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.bundle.min.js"></script>
+    <!-- Third party plugin JS-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
+    <!-- Contact form JS-->
+    <script src="assets/mail/jqBootstrapValidation.js"></script>
+    <script src="assets/mail/contact_me.js"></script>
+    <!-- Core theme JS-->
+    <script src="js/scripts.js"></script>
+</body>
+
+<div class="modal fade bd-example-modal-lg" id="registration" tabindex="-1" role="dialog"
+    aria-labelledby="myLargeModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Request for team registration</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+
+            <form id="teamRegistrationForm" name="sentRegistrationRequest">
+                <div class="modal-body">
+                    <div class="row">
+                        <div class="form-group col-md-6">
+                            <label for="team-name" class="col-form-label">Team Name</label>
+                            <input type="text" class="form-control" id="team-name" required>
+                        </div>
+                        <div class="form-group col-md-6">
+                            <label for="captain-name" class="col-form-label">Captain Name</label>
+                            <input type="text" class="form-control" id="captain-name" required>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="form-group col-md-6">
+                            <label for="captain-email" class="col-form-label">Email</label>
+                            <input type="text" class="form-control" id="captain-email" required>
+                        </div>
+                        <div class="form-group col-md-6">
+                            <label for="contact-number" class="col-form-label">WhatsApp No</label>
+                            <input type="text" class="form-control" id="contact-number" required>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="form-group col-md-6">
+                            <label for="player-1" class="col-form-label">Player 1</label>
+                            <input type="text" class="form-control" id="player-1" required>
+                        </div>
+                        <div class="form-group col-md-6">
+                            <label for="jersey-1" class="col-form-label">Jersey no</label>
+                            <input type="text" class="form-control" id="jersey-1" required>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="form-group col-md-6">
+                            <label for="player-2" class="col-form-label" required="required">Player 2</label>
+                            <input type="text" class="form-control" id="player-2">
+                        </div>
+                        <div class="form-group col-md-6">
+                            <label for="jersey-3" class="col-form-label">Jersey no</label>
+                            <input type="text" class="form-control" id="jersey-2" required>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="form-group col-md-6">
+                            <label for="player-3" class="col-form-label" required="required">Player 3</label>
+                            <input type="text" class="form-control" id="player-3">
+                        </div>
+                        <div class="form-group col-md-6">
+                            <label for="jersey-3" class="col-form-label">Jersey no</label>
+                            <input type="text" class="form-control" id="jersey-3" required>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="form-group col-md-6">
+                            <label for="player-4" class="col-form-label">Player 4</label>
+                            <input type="text" class="form-control" id="player-4" required>
+                        </div>
+                        <div class="form-group col-md-6">
+                            <label for="jersey-4" class="col-form-label">Jersey no</label>
+                            <input type="text" class="form-control" id="jersey-4" required>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="form-group col-md-6">
+                            <label for="player-5" class="col-form-label">Player 5</label>
+                            <input type="text" class="form-control" id="player-5" required>
+                        </div>
+                        <div class="form-group col-md-6">
+                            <label for="jersey-5" class="col-form-label">Jersey no</label>
+                            <input type="text" class="form-control" id="jersey-5" required>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="form-group col-md-6">
+                            <label for="player-6" class="col-form-label">Player 6</label>
+                            <input type="text" class="form-control" id="player-6" required>
+                        </div>
+                        <div class="form-group col-md-6">
+                            <label for="jersey-6" class="col-form-label">Jersey no</label>
+                            <input type="text" class="form-control" id="jersey-6" required>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="form-group col-md-6">
+                            <label for="player-7" class="col-form-label">Player 7</label>
+                            <input type="text" class="form-control" id="player-7" required>
+                        </div>
+                        <div class="form-group col-md-6">
+                            <label for="jersey-7" class="col-form-label">Jersey no</label>
+                            <input type="text" class="form-control" id="jersey-7" required>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="form-group col-md-6">
+                            <label for="player-8" class="col-form-label">Player 8</label>
+                            <input type="text" class="form-control" id="player-8" required>
+                        </div>
+                        <div class="form-group col-md-6">
+                            <label for="jersey-8" class="col-form-label">Jersey no</label>
+                            <input type="text" class="form-control" id="jersey-8" required>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="form-group col-md-6">
+                            <label for="player-9" class="col-form-label">Player 9</label>
+                            <input type="text" class="form-control" id="player-9" required>
+                        </div>
+                        <div class="form-group col-md-6">
+                            <label for="jersey-9" class="col-form-label">Jersey no</label>
+                            <input type="text" class="form-control" id="jersey-9" required>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="form-group col-md-6">
+                            <label for="player-10" class="col-form-label">Player 10</label>
+                            <input type="text" class="form-control" id="player-10" required>
+                        </div>
+                        <div class="form-group col-md-6">
+                            <label for="jersey-10" class="col-form-label">Jersey no</label>
+                            <input type="text" class="form-control" id="jersey-10" required>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="form-group col-md-6">
+                            <label for="player-11" class="col-form-label">Player 11</label>
+                            <input type="text" class="form-control" id="player-11" required>
+                        </div>
+                        <div class="form-group col-md-6">
+                            <label for="jersey-11" class="col-form-label">Jersey no</label>
+                            <input type="text" class="form-control" id="jersey-11" required>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="form-group col-md-6">
+                            <label for="player-12" class="col-form-label">Player 12(Optional)</label>
+                            <input type="text" class="form-control" id="player-12">
+                        </div>
+                        <div class="form-group col-md-6">
+                            <label for="jersey-12" class="col-form-label">Jersey no</label>
+                            <input type="text" class="form-control" id="jersey-12">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="message-text" class="col-form-label">Message:</label>
+                        <textarea class="form-control" id="message-text" required="required"></textarea>
+                    </div>
                 </div>
                 <div class="modal-footer">
                     <div id="registration-success"></div>
                     <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
                     <button type="submit" class="btn btn-primary" is="sendRegistrationButton">Submit </button>
                 </div>
-                </form>
-            </div>
+            </form>
         </div>
     </div>
+</div>
+
 </html>
 <script>
     function handleClick() {
