@@ -37,7 +37,6 @@
                     <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#portfolio">Videos</a></li>
                     <!-- <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#about">Malmöhus</a></li> -->
                     <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#sponsors">Sponsors</a></li>
-                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#contact">Register</a></li>
                      <li class="nav-item">
                         <div class="dropdown show">
                             <a class="nav-link  dropdown-toggle" data-toggle="dropdown" aria-haspopup="true"
@@ -45,7 +44,7 @@
                                 More
                             </a>
                             <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-                            <a class="dropdown-item js-scroll-trigger" href="#team">Teams</a>
+                                <a class="dropdown-item js-scroll-trigger" href="#team">Teams</a>
                                 <!-- <a class="dropdown-item js-scroll-trigger" href="#services-teams">Events</a> -->
                                 <a class="dropdown-item js-scroll-trigger" href="#services-fixtures">Fixtures</a>
                                 <a class="dropdown-item js-scroll-trigger" href="#services-stats">Stats</a>  
@@ -53,6 +52,8 @@
                                 <a class="dropdown-item js-scroll-trigger" href="#contact-faqs">FAQ’s</a>
                                 <a class="dropdown-item js-scroll-trigger" href="#contact-jobs">Jobs</a>
                                 <a class="dropdown-item js-scroll-trigger" href="#ecn-crew">ECN Crew Members</a>
+
+                                <a class="dropdown-item js-scroll-trigger" href="#contact">Contact Us</a>
                             </div>
                         </div>
                     </li>
@@ -372,14 +373,14 @@
     <section class="page-section" id="contact">
         <div class="container">
             <div class="text-center">
-                <h2 class="section-heading text-uppercase">Registration</h2>
-                <h3 class="section-subheading text-muted">Contact us to register your team.</h3>
+                <h2 class="section-heading text-uppercase">Contact Us</h2>
+                <h3 class="section-subheading text-muted">Contact us for any query.</h3>
             </div>
             <form id="contactForm" name="sentMessage" onSubmit="handleClick()">
                 <div class="row align-items-stretch mb-5">
                     <div class="col-md-6">
                         <div class="form-group">
-                            <input class="form-control" id="name" type="text" placeholder="Team name *"
+                            <input class="form-control" id="name" type="text" placeholder="Your name *"
                                 required="required" data-validation-required-message="Please enter your name." />
                             <p class="help-block text-danger"></p>
                         </div>
@@ -403,39 +404,11 @@
                             <p class="help-block text-danger"></p>
                         </div>
                     </div>
-                    <div style="color: #ffffff" class="col-md-12">
-                        <div>
-                            <small>
-                                <br />
-                                Note: By Registering here shows your interest to participate
-                                in the ECN Tournament to be conducted in Malmö from 3rd Aug - 7th Aug. Registration does
-                                not mean an automatic selection of the team for the event.
-                                We will make a decision on your application and respond
-                                back to you on whether your application has been successful for the event or not.
-                                Once your club is selected you will have to do the complete player registration on
-                                our website and pay an entry fees of 2,500 SEK within 24 hour.
-                                The communication will be sent to your registered mail ID.
-                                For the teams selected,if they fail to comply with the player registration details or
-                                entry
-                                fee payment timeline,the next team in the list will be considered over the teams missing
-                                the deadline.
-                            </small>
-                            <br />
-                            <br />
-                        </div>
-                        <div class="form-check form-check-inline">
-                            <input class="form-check-input" type="checkbox" id="terms-condition"
-                                data-validation-required-message="Please accept the conditions." required>
-                            <label class="form-check-label" for="terms-condition"> &nbsp;I hereby agree on above
-                                condition</a></label>
-                            <p class="help-block text-danger"></p>
-                        </div>
-                    </div>
                 </div>
                 <div class="text-center">
                     <div id="success"></div>
                     <button class="btn btn-primary btn-xl text-uppercase" id="sendMessageButton"
-                        type="submit">Register</button>
+                        type="submit">Submit</button>
                 </div>
             </form>
         </div>
