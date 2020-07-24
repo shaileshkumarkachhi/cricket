@@ -10537,6 +10537,26 @@ section#contact form#contactForm :-ms-input-placeholder {
   background-image: url("../assets/img/portfolio/kids-cricket/kids-1.jpeg");
 }
 
+.item-7{
+  background-image: url("../assets/img/portfolio/ladies-cricket/ladies-1.jpg");
+}
+
+.item-8{
+  background-image: url("../assets/img/portfolio/ladies-cricket/ladies-7.2.jpg");
+}
+
+.item-9{
+  background-image: url("../assets/img/portfolio/ladies-cricket/ladies-6.jpg");
+}
+
+.item-10{
+  background-image: url("../assets/img/portfolio/ladies-cricket/ladies-2.jpg");
+}
+
+.item-11{
+  background-image: url("../assets/img/portfolio/ladies-cricket/ladies-5.2.jpg");
+}
+
 .crew{
   background-color: #dfe0e1;
     height: 237px;
@@ -10575,3 +10595,17 @@ section#contact form#contactForm :-ms-input-placeholder {
 .trupti{
   background-image: url(../assets/img/team/trupti_gaonkar.jpg);
 }
+
+.nav-tabs .nav-item .nav-link {
+  color: black;
+}
+
+.nav-tabs .nav-item .active {
+  background-color: black;
+  color: #fed136;;
+}
+
+/* .nav-pills .nav-item .active:hover {
+  color: #fed136;;
+} */
+
