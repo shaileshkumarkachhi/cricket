@@ -156,6 +156,63 @@ $(function () {
     },
   });
 
+  $(
+      "#loginForm input, #loginForm button"
+  ).jqBootstrapValidation({
+    preventSubmit: true,
+    submitError: function ($form, event, errors) {
+      // additional error messages or events
+    },
+    submitSuccess: function ($form, event) {
+      event.preventDefault(); // prevent default submit behaviour
+      // get values from FORM
+      const requestData = {
+        username: $("input#username").val(),
+        password: $("input#password").val()
+      };
+      $this = $("#login-button");
+      $this.prop("disabled", true); // Disable submit button until AJAX call is complete to prevent duplicate messages
+      $.ajax({
+        url: "https://ecn-backend.cricketsweden.com/sessions/create",
+        type: "POST",
+        data: requestData,
+        cache: false,
+        success: function (data) {
+          console.log(data);
+          localStorage.setItem("id_token", data.id_token);
+          localStorage.setItem("access_token", data.access_token);
+          // Success message
+          window.location.href = 'dashboard.html';
+        },
+        error: function (err) {
+          // Fail message
+          $("#login-success").html("<div class='alert alert-danger'>");
+          $("#login-success > .alert-danger")
+          .html(
+              "<button type='button' class='close' data-dismiss='alert' aria-hidden='true'>&times;"
+          )
+          .append("</button>");
+          $("#login-success > .alert-danger").append(
+              $("<strong>").text(
+                  err.responseText
+              )
+          );
+          $("#login-success > .alert-danger").append("</div>");
+          //clear all fields
+          $("#loginForm").trigger("reset");
+        },
+        complete: function () {
+          setTimeout(function () {
+            $this.prop("disabled", false); // Re-enable submit button when AJAX call is complete
+          }, 1000);
+        },
+      });
+    },
+    filter: function () {
+      return $(this).is(":visible");
+    },
+  });
+
   $('a[data-toggle="tab"]').click(function (e) {
     e.preventDefault();
     $(this).tab("show");
