@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+    <title>ECS</title>
+    <link rel="icon" type="image/x-icon" href="assets/img/favicon.ico" />
+    <!-- Font Awesome icons (free version)-->
+    <script src="https://use.fontawesome.com/releases/v5.13.0/js/all.js" crossorigin="anonymous"></script>
+    <!-- Google fonts-->
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css" />
+    <link href="https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic,700italic" rel="stylesheet"
+        type="text/css" />
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700" rel="stylesheet" type="text/css" />
+    <!-- Core theme CSS (includes Bootstrap)-->
+    <link href="css/styles.css" rel="stylesheet" />
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.21/css/jquery.dataTables.min.css"/>
+</head>
+
+<body id="page-top">
+    <!-- Navigation-->
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav" style="background: #000;">
+        <div class="container">
+            <a class="navbar-brand js-scroll-trigger" href="#page-top">ECN Dream XI - MALMÖ </a>
+            <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse"
+                data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false"
+                aria-label="Toggle navigation">
+                Menu
+                <i class="fas fa-bars ml-1"></i>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+                <ul class="navbar-nav text-uppercase ml-auto">                  
+                    <li class="nav-item"><a class="nav-link js-scroll-trigger active"  href="./dashboard.html">Latest News</a></li>
+                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="./finance.html">Finance</a></li> 
+                    <li class="nav-item"><a class="nav-link js-scroll-trigger" onclick="logout()" id="logout">Logout</a></li>                   
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <section class="page-section bg-light" id="latest-news">
+        <div class="container">
+            <div class="text-center">
+                <div class="tab-content">
+                    <div>
+                    	<table class="table table-striped" id="news-table">
+						  <thead>
+						    <tr>
+						      <th scope="col">No</th>
+						      <th scope="col">Title</th>
+						      <th scope="col">Action</th>
+						    </tr>
+						  </thead>
+						  <tbody id="news-list">
+						  </tbody>
+						</table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Footer-->
+    <footer class="footer py-4">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-4 text-lg-left">Copyright © Malmöhus 2020</div>
+                <div class="col-lg-4 my-3 my-lg-0">
+                    <a class="btn btn-dark btn-social mx-2" href="#!"><i class="fab fa-twitter"></i></a>
+                    <a class="btn btn-dark btn-social mx-2" href="#!"><i class="fab fa-facebook-f"></i></a>
+                    <a class="btn btn-dark btn-social mx-2" href="#!"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+                <div class="col-lg-4 text-lg-right">
+                    <a class="mr-3" href="#!">Privacy Policy</a>
+                    <a href="#!">Terms of Use</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- Bootstrap core JS-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.bundle.min.js"></script>
+    <!-- Third party plugin JS-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
+
+    <script src="https://cdn.datatables.net/1.10.21/js/jquery.dataTables.min.js"></script>
+    <!-- Contact form JS-->
+    <script src="assets/mail/jqBootstrapValidation.js"></script>
+    <script src="assets/mail/contact_me.js"></script>
+    <!-- Core theme JS-->
+    <script src="js/scripts.js"></script>
+</body>
+
+
+</html>
+
+<script type="text/javascript">
+	$(document).ready( function () {
+		$.ajax({url: "https://us-central1-hardy-abode-283819.cloudfunctions.net/getLatestNews", success: function(result){
+		    $("#news-list").html("");
+		    const data = JSON.parse(result);
+		    const news = data.news.reverse();
+		    let html = '';
+		    for (var i = 0; i < news.length; i++) {
+		    	let tr = "<tr>"
+		    	tr += '<td>';
+		        tr += (i+1);
+		        tr += '</td>';  
+		        tr += '<td>';
+		        tr += news[i].title;
+		        tr += '</td>'; 
+		        tr += '<td>';
+		        tr += '<i class="fa fa-trash" aria-hidden="true"></i>';
+		        tr += '</td>';    
+		        tr += "</tr>";  
+		        html += tr;   
+		     }
+		     $("#news-list").html(html);
+	    	$('#news-table').DataTable();
+		  }});
+	} );
+
+function logout(){
+	localStorage.clear();
+	window.location.href = 'login.html';
+}
+</script>
