@@ -100,6 +100,7 @@
 
 <script type="text/javascript">
 	$(document).ready( function () {
+        isLoggedIn();
 		$.ajax({url: "https://us-central1-hardy-abode-283819.cloudfunctions.net/getLatestNews", success: function(result){
 		    $("#news-list").html("");
 		    const data = JSON.parse(result);
@@ -123,9 +124,4 @@
 	    	$('#news-table').DataTable();
 		  }});
 	} );
-
-function logout(){
-	localStorage.clear();
-	window.location.href = 'login.html';
-}
 </script>
