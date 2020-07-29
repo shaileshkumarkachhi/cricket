@@ -223,3 +223,27 @@ $(function () {
 $("#name").focus(function () {
   $("#success").html("");
 });
+
+function isLoggedIn() {
+  const access_token = localStorage.getItem("access_token");
+   $.ajax({
+        url: "https://ecn-backend.cricketsweden.com/api/protected/random-quote",
+        headers: {
+          Authorization: "Bearer " + access_token
+        },
+        type: "GET",
+        cache: false,
+        success: function (data) {
+          
+        },
+        error: function (err) {
+          alert("Unauthorized Access");
+          window.location.href = 'login.html';
+        },
+      });
+}
+
+function logout(){
+	localStorage.clear();
+	window.location.href = 'login.html';
+}

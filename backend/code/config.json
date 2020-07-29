@@ -1,0 +1,5 @@
+{
+  "secret": "malmohus rocks!",
+  "audience": "ecs-tournament-dashbooard",
+  "issuer": "https://malmohus-ecn-dream11.cricketsweden.com"
+}
