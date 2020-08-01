@@ -52,7 +52,8 @@
 						    <tr>
 						      <th scope="col">No</th>
 						      <th scope="col">Summary</th>
-						      <th scope="col">Spent by</th>
+						      <th scope="col">Submited by</th>
+                            <th scope="col">Time</th>
 						    </tr>
 						  </thead>
 						  <tbody id="finance-list-body">
@@ -102,21 +103,24 @@
 <script type="text/javascript">
 	$(document).ready( function () {
         isLoggedIn();
-		$.ajax({url: "https://us-central1-hardy-abode-283819.cloudfunctions.net/getLatestNews", success: function(result){
-		    $("#news-list").html("");
+		$.ajax({url: "https://europe-west1-hardy-abode-283819.cloudfunctions.net/getFinance", success: function(result){
+		    $("#finance-list-body").html("");
 		    const data = JSON.parse(result);
-		    const news = data.news.reverse();
+		    const finance = data.finance;
 		    let html = '';
-		    for (var i = 0; i < news.length; i++) {
+		    for (var i = 0; i < finance.length; i++) {
 		    	let tr = "<tr>"
 		    	tr += '<td>';
 		        tr += (i+1);
 		        tr += '</td>';  
 		        tr += '<td>';
-		        tr += news[i].title;
+		        tr += finance[i].data;
 		        tr += '</td>'; 
 		        tr += '<td>';
-		        tr += '<i class="fa fa-trash" aria-hidden="true"></i>';
+		        tr += finance[i].createBy;
+		        tr += '</td>'; 
+                 tr += '<td>';
+		        tr += finance[i].timestamp;
 		        tr += '</td>';    
 		        tr += "</tr>";  
 		        html += tr;   

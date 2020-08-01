@@ -237,7 +237,6 @@ function isLoggedIn() {
           
         },
         error: function (err) {
-          alert("Unauthorized Access");
           window.location.href = 'login.html';
         },
       });
