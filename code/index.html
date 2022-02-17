@@ -177,12 +177,12 @@
                 }
             ]
         }
-        var url = "https://hooks.slack.com/services/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"
+        var url = "https://us-central1-mhcc-indoor-tournament.cloudfunctions.net/registration"
  
         fetch(url, {
         method: 'post',
         headers: {
-            'Accept': 'application/json, text/plain, */*',
+            'Accept': 'application/json',
         },
         body: JSON.stringify(data)
         })
